@@ -1,0 +1,79 @@
+#welcome_page{
+  background-image: url("greenbackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 900px;
+}
+
+#welcome_text h1 {
+  text-align: center;
+  padding-top: 19%;
+  font-size: 52px;
+  color: white;
+}
+
+#letsplay {
+  padding: 17px;
+    margin: 0 42%;
+    background-color: salmon;
+    width: 234px;
+    color: white;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+
+#trivia_box {
+  display: none;
+  border: 8px solid orange;
+  border-radius: 20px;
+  width: 300px;
+  Height: auto;
+  margin: auto auto;
+  background-color: rgba(255, 255, 255, .6);
+
+}
+
+#yes, #no {
+  width: 40%;
+    height: auto;
+    margin: 5% 5% 4% 5%;
+    font-size: 21px;
+    background-color: white;
+    border: 2px solid orange;
+    padding: 5px 0;
+}
+
+.Question1 {
+  font-size: 32px;
+  text-align: center;
+  padding: 35px 20px 0 35px;
+  font-weight: 600;
+}
+
+.Question2 {
+  font-size: 32px;
+  text-align: center;
+  padding: 35px 20px 0 35px;
+  font-weight: 600;
+  display: none;
+}
+
+.Question3 {
+  font-size: 32px;
+  text-align: center;
+  padding: 35px 20px 0 35px;
+  font-weight: 600;
+  display: none;
+}
+
+.Question4 {
+  font-size: 32px;
+  text-align: center;
+  padding: 35px 20px 0 35px;
+  font-weight: 600;
+  display: none;
+}
