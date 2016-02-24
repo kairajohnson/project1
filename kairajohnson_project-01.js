@@ -8,9 +8,7 @@ if ( (name=='') || (name==null) )
 
 //welcome Header
 var welcome_header = document.createElement("H1");
-console.log(welcome_header);
 var header_text = document.createTextNode ("Welcome " + name.toUpperCase() +"\n" + ", lets see if your green!");
-console.log(header_text);
 welcome_header.appendChild(header_text);
 
 document.getElementById("welcome_text").appendChild(welcome_header);
@@ -21,7 +19,7 @@ var gameStart=document.getElementById('letsplay')
 
 
 function changeBackgroundImageQuestion1 (){
-  document.getElementById("welcome_page").style.backgroundImage = "url('cycling.jpg')";
+  document.body.style.backgroundImage = "url('cycling.jpg')";
 }
 
 gameStart.addEventListener('click', changeBackgroundImageQuestion1);
@@ -35,64 +33,32 @@ function hideshow() {
   document.getElementById('welcome_text').style.display = 'block';
   welcome_text.style.display ='none'
   document.getElementById("trivia_box").style.display = 'block'
+  loopquestion()
 }
 //Questions Loop
-
-var Questions=document.getElementsByClassName("Question")
+var trivia_questions =[
+  "If your in the car and have an empty bottle, Would you throw it out the window?", "Do you ride a bike 5 or more times a week?"
+];
 var points = 0;
-$(document).ready(function(){
-  for (var i=0; i<Questions.length; i++){
-  var input = prompt(Questions[i].textContent) {
-    $('body').append(<'div class="Questions' + i + '"/>');
+var input=document.querySelectorAll(".button")
+var index = 0;
+
+function loopquestion () {
+
+  var question = trivia_questions[index];
+  if (!question){
+
+    return
+
   }
-});
+  document.getElementById("questionBox").innerHTML =trivia_questions[index++];
+
+
+
   if(input === "yes"){
     points = points + 1;
+
   }
 }
-alert("You got " + points + " points!");
 
-
-
-//
-// //Question1 Transition
-// var yes=document.getElementById('yes');
-// var no=document.getElementById('no');
-// point = 0;
-//
-// yes.addEventListener('click',yes1);
-// no.addEventListener('click',no1);
-//
-// function yes1(){
-//   document.querySelector('.Question1').style.display='none'
-//   document.querySelector('.Question2').style.display='block'
-//   point++;
-// };
-//
-// function no1(){
-//   document.querySelector('.Question1').style.display='none'
-//   document.querySelector('.Question2').style.display='block'
-//   console.log("hide")
-// };
-//
-// //question2 to 3
-// //Question2 Transition
-//
-// var yes_2=document.getElementById('yes');
-// var no_2=document.getElementById('no');
-//
-// yes_2.addEventListener('click',yes2);
-// no_2.addEventListener('click',no2);
-//
-// function yes2(){
-//   document.querySelector('.Question1').style.display='none'
-//   document.querySelector('.Question2').style.display='none'
-//   document.querySelector('.Question3').style.display='block'
-// }
-//
-// function no2(){
-//   document.querySelector('.Question1').style.display='none'
-//   document.querySelector('.Question2').style.display='none'
-//   document.querySelector('.Question3').style.display='block'
-//   point++;
-// }
+//alert("You got " + points + " points!");
