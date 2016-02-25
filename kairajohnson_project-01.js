@@ -75,6 +75,10 @@ function yesButton (){
     points = points + 1;
   document.getElementById('score').innerHTML = "SCORE: " + points;
 }
+if (points === 5)
+{
+   points = 0;
+}
 }
 yes.addEventListener('click', yesButton)
 
