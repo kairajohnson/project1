@@ -37,7 +37,7 @@ function hideshow() {
 }
 //Questions Loop
 var trivia_questions =[
-  "If your in the car and have an empty bottle, Would you throw it out the window?", "Do you ride a bike 5 or more times a week?"
+  "Your going to a gig a mile away, are you riding a bike?", "Your drinking a soda while drving. When you finish, would you throw it out the window?", "You just got an awesome mason jar with your jam, when it's empty, will you reuse it?", "Styrofoam plates, cups, etc. are bad for the earth, will you still buy it?"," Do you put recycables in the recyling bin?"
 ];
 var points = 0;
 var input=document.querySelectorAll(".button")
